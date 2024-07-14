@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="gallery">
+    <h1>Gallery</h1>
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='images/before.jpg') }}" alt="Before">
+        <img src="{{ url_for('static', filename='images/after.jpg') }}" alt="After">
+    </div>
+    <!-- Repeat for other projects -->
+</section>
+{% endblock %}

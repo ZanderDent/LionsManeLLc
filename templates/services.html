@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="services">
+    <h1>Our Services</h1>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/lawn-cutting.jpg') }}" alt="Lawn Cutting">
+        <h2>Lawn Cutting</h2>
+        <p>Professional lawn cutting services to keep your lawn looking neat and well-maintained.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/fence-rebuilding.jpg') }}" alt="Fence Rebuilding">
+        <h2>Fence Rebuilding</h2>
+        <p>Expert fence rebuilding services to ensure your property is secure and aesthetically pleasing.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/driveway-fixing.jpg') }}" alt="Driveway Fixing">
+        <h2>Driveway Fixing</h2>
+        <p>Reliable driveway fixing services to repair cracks and enhance the durability of your driveway.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/tree-cutting.jpg') }}" alt="Tree Cutting">
+        <h2>Tree Cutting</h2>
+        <p>Safe and efficient tree cutting services to remove unwanted or hazardous trees.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/tree-trimming.jpg') }}" alt="Tree Trimming">
+        <h2>Tree Trimming</h2>
+        <p>Professional tree trimming services to maintain the health and appearance of your trees.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/bush-trimming.jpg') }}" alt="Bush Trimming">
+        <h2>Bush Trimming</h2>
+        <p>Expert bush trimming services to keep your bushes well-shaped and healthy.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/mulching.jpg') }}" alt="Mulching">
+        <h2>Mulching</h2>
+        <p>High-quality mulching services to improve soil health and plant growth.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/fertilizing.jpg') }}" alt="Fertilizing">
+        <h2>Fertilizing</h2>
+        <p>Comprehensive fertilizing services to provide essential nutrients for your lawn and plants.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/weed-control.jpg') }}" alt="Weed Control">
+        <h2>Weed Control</h2>
+        <p>Effective weed control services to eliminate unwanted weeds and maintain a healthy lawn.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/power-washing.jpg') }}" alt="Power Washing">
+        <h2>Power Washing</h2>
+        <p>Power washing services to clean and restore the appearance of your roofs and sidewalks.</p>
+    </div>
+    
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/edge-lining.jpg') }}" alt="Edge Lining">
+        <h2>Edge Lining</h2>
+        <p>Precision edge lining services to give your lawn a sharp and defined look.</p>
+    </div>
+
+    <!-- Add the uploaded image to a relevant section -->
+    <div class="service">
+        <img src="{{ url_for('static', filename='uploads/image.png') }}" alt="Landscaping">
+        <h2>Landscaping</h2>
+        <p>Comprehensive landscaping services to transform and maintain your outdoor spaces.</p>
+    </div>
+
+</section>
+{% endblock %}

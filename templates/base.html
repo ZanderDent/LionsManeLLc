@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lions Mane LLC - Transforming Your Outdoor Spaces">
+    <title>Lions Mane LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/lions-mane-llc-team/30min?background_color=000000&text_color=4acc65&primary_color=44b6db',
+                text: 'Schedule time with me',
+                color: '#3ad493',
+                textColor: '#ffffff',
+                branding: false
+            });
+        }
+    </script>
+    <!-- Calendly badge widget end -->
+</head>
+<body>
+    <header>
+        <div class="logo">Lions Mane LLC</div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+            </ul>
+        </nav>
+        <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+        <div class="quick-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('services') }}">Services</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('testimonials') }}">Testimonials</a>
+        </div>
+        <p>© 2024 Lions Mane LLC. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript">
+        function toggleMenu() {
+            document.getElementById('nav-list').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="testimonials">
+    <h1>Customer Testimonials</h1>
+    <div class="testimonial">
+        <p>"Great service!" - Jane Doe</p>
+    </div>
+    <!-- Repeat for other testimonials -->
+    <form method="POST">
+        <h2>Submit Your Review</h2>
+        <input type="text" name="name" placeholder="Name">
+        <textarea name="review" placeholder="Your Review"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+{% endblock %}
