@@ -4,10 +4,10 @@ services:
     env: python
     plan: free
     region: oregon
-    buildCommand: ""
-    startCommand: gunicorn app:app
-    publish:
-      path: .
-    envVars:
-      - key: FLASK_ENV
-        value: production
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+envVars:
+  - key: FLASK_ENV
+    value: production
+  - key: DATABASE_URL
+    value: your-database-url
