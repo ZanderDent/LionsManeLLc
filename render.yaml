@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lions-mane-llc
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    publish:
+      path: .
+    envVars:
+      - key: FLASK_ENV
+        value: production
