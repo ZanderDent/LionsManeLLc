@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Lightbox CSS for Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    
     <!-- Calendly badge widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -16,7 +20,7 @@
         window.onload = function() {
             Calendly.initBadgeWidget({
                 url: 'https://calendly.com/lions-mane-llc-team/30min?background_color=000000&text_color=4acc65&primary_color=44b6db',
-                text: 'Schedule time with me',
+                text: 'Book with us',
                 color: '#3ad493',
                 textColor: '#ffffff',
                 branding: false
@@ -24,6 +28,8 @@
         }
     </script>
     <!-- Calendly badge widget end -->
+
+    {% block head %}{% endblock %}
 </head>
 <body>
     <header>
@@ -34,26 +40,34 @@
                 <li><a href="{{ url_for('about') }}">About Us</a></li>
                 <li><a href="{{ url_for('services') }}">Services</a></li>
                 <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
             </ul>
         </nav>
         <div id="menu-toggle" onclick="toggleMenu()">☰</div>
     </header>
-    {% block content %}{% endblock %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
     <footer>
         <div class="quick-links">
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('about') }}">About Us</a>
             <a href="{{ url_for('services') }}">Services</a>
             <a href="{{ url_for('gallery') }}">Gallery</a>
-            <a href="{{ url_for('testimonials') }}">Testimonials</a>
         </div>
         <p>© 2024 Lions Mane LLC. All rights reserved.</p>
     </footer>
+    
+    <!-- Lightbox JS for Gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
     <script type="text/javascript">
         function toggleMenu() {
             document.getElementById('nav-list').classList.toggle('show');
         }
     </script>
+    
+    {% block scripts %}{% endblock %}
 </body>
 </html>
