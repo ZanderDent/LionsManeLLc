@@ -2,7 +2,9 @@
 
 {% block content %}
 <section class="banner">
-    <h1>Gallery</h1>
+    <div class="gallery-header">
+        <h1>Gallery</h1>
+    </div>
     <div class="gallery-item">
         <a href="{{ url_for('static', filename='images/image.png') }}" data-lightbox="gallery" data-title="Before">
             <img src="{{ url_for('static', filename='images/image.png') }}" alt="Before">
@@ -13,27 +15,3 @@
     </div>
 </section>
 {% endblock %}
-
-<style>
-/* Add any additional custom styles for the gallery here */
-
-.gallery-item {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery-item img {
-    max-width: 300px;
-    height: auto;
-    border: 2px solid #D4D4D4;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-}
-</style>
